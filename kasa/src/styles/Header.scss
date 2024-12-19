@@ -21,11 +21,11 @@
     font-size: 24px;
     font-weight: 500;
     text-decoration: none;
-    color: black;
+    color:$black;
     &:hover{
         color: $primary;
     }
     &:active{
-        text-decoration:underline solid black;
+        border-bottom: 1px solid $black;
     }
 }
