@@ -5,7 +5,7 @@ import Cards from "../components/Cards"
 function Home(){
     console.log(data)
 return(
-<div className="home">
+<>
     <Banner texte="Chez vous, partout et ailleurs"/>
     <section className="gallery">
       {data.map(({id, title, cover})=>(
@@ -16,6 +16,6 @@ return(
         </div>
       ))}
     </section>
-</div>)
+</>)
 }
 export default Home
