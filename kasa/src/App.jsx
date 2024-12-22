@@ -8,7 +8,9 @@ function App() {
   return (
     <Router>
       <Header/>
-      <RoutesApp/>
+      <main className="layout">
+        <RoutesApp/>
+      </main>
       <Footer/>
    </Router>
   )
