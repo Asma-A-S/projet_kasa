@@ -10,7 +10,7 @@ function RoutesApp(){
         <Routes>
             <Route path="/" element = {<Home/>}></Route>
             <Route path="/about" element = {<About/>}></Route>
-            <Route path="/appart" element = {<Appart/>}></Route>
+            <Route path="/appart/:id" element = {<Appart/>}></Route>
             <Route path="*" element = {<Error/>}></Route>
         </Routes>
     )
