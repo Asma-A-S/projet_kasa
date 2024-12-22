@@ -1,7 +1,8 @@
 @import './variables.scss' ;
 .header{
-    margin: 25px auto;
+    margin: 40px auto;
     width: 1240px;
+    height: 68px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +26,7 @@
     &:hover{
         color: $primary;
     }
-    &:active{
-        border-bottom: 1px solid $black;
+    &.active{
+        border-bottom: 2px solid $black;
     }
 }

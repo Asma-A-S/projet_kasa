@@ -1,10 +1,21 @@
-
-:root {
+html, body {
   margin: 0 auto;
-  padding: 0;
-  width: 1440px;
   font-family: 'Montserrat', sans-serif;
+  width: 1440px;
+  box-sizing: border-box; 
+  max-height: 100%;
+}
+#root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+.layout{
+  width: 100%;
+  max-width: 1240px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }

@@ -1,16 +1,14 @@
 .footer{
-    position: fixed;
-    bottom: 0;
-    width: 1440px;
+    margin: auto;
+    margin-bottom: 0;
+    width: 100%;
     height: 209px;
     background-color: black;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;  
-}
-.footer_texte{
-    color: white;
-    font-family: 'Montserrat', sans-serif;
+    &_texte{
+        color: white;
+    }
 }
