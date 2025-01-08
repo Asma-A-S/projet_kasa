@@ -2,3 +2,10 @@ $primary:#FF6060;
 $black:#000;
 $grey: #F6F6F673;
 $animation: rotate(-180deg);
+
+@mixin flexbox($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
