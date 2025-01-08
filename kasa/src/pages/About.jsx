@@ -7,7 +7,7 @@ function About(){
 return(
     <>
         <Banner/>
-        <div className="collapse">
+        <div className="dropdown">
            {dataCollapse.map(({title, description, index})=>(
             <div key={`${title}-${index}`}>
                 <Collapse
