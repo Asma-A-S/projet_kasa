@@ -1,14 +1,15 @@
 import { useState } from "react"
 import arrow from "../assets/arrow.png"
+import '../styles/About.scss'
 function Collapse({head, body}){
     const [isOpen, setIsOpen] = useState(false)
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
     };
     return( 
-    <>
+    <div className="collapse">
         <div className="dropdown-header">
-            <h2>{head}</h2>
+            <h2 className="collapse-header">{head}</h2>
             <img 
                 src={arrow} 
                 alt={isOpen ? "Masquer le contenu" : "Afficher le contenu"} 
@@ -20,7 +21,7 @@ function Collapse({head, body}){
         <div className={`collapse_description ${isOpen ? "show" : "hide"}`}>
           <p>{body}</p>
         </div>
-    </>
+        </div>
     );
 }
 export default Collapse
