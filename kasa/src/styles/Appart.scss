@@ -1,0 +1,106 @@
+
+@import './variables.scss';
+
+.dropdowns{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    .collapse{
+    width: 48%;
+    }
+}
+
+.dropdowns .collapse-header {
+    font-size: 18px;
+}
+
+.appart{
+    width: 100%;
+    &_infos{
+        justify-content: center;
+        align-items: center;
+    }
+    &_title_location_tags{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &_title{
+        color: $primary;
+        font-size:36px;
+        margin: 0;
+    }
+    &_location{
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500
+    }
+    &_name{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &_picture{
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        margin-left: 20px;
+    }
+    &_profil{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 64px;
+        line-height: 25.69px;
+        color: $primary;
+    }
+    &_tags{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_tag{
+        background-color: $primary;
+        border-radius: 10px;
+        height: 25px;
+        color: white;
+        font-size: 14px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        padding: 2px 15px;
+    }
+   
+    &_rating{
+        width: 196px;
+        height: 36px;
+        margin-top: 20px;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+
+}
+.appart_infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    .appart_profil_rating{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        align-items: flex-end;
+    }
+}
+
