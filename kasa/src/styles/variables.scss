@@ -1,7 +1,9 @@
-$primary:#FF6060;
-$black:#000;
-$grey: #F6F6F673;
+$primary: #ff6060;
+$black: #000;
+$grey: #f6f6f673;
 $animation: rotate(-180deg);
+$font500: 500;
+$fontClamp: clamp(12px, 5vh, 24px);
 
 @mixin flexbox($direction: row, $justify: center, $align: center) {
     display: flex;

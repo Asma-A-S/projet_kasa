@@ -1,9 +1,9 @@
 @import './variables.scss';
 .footer {
-    margin: auto;
-    margin-bottom: 0;
     width: 100%;
+    max-width: 1440px;
     height: 209px;
+    margin: 0 auto;
     background-color: black;
     @include flexbox(column, flex-end, center);
     &_texte {
@@ -19,5 +19,6 @@
     }
     @media screen and (max-width: 768px) {
         justify-content: center;
+        width: 100%;
     }
 }

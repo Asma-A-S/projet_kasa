@@ -1,73 +1,108 @@
-
 @import './variables.scss';
 
-.dropdowns{
+.dropdowns {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    .collapse{
-    width: 48%;
+    .collapse {
+        width: 48%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
     }
 }
 
-.dropdowns .collapse-header {
+.collapse-header-appart {
     font-size: 18px;
 }
 
-.appart{
+.appart {
     width: 100%;
-    &_infos{
-        justify-content: center;
-        align-items: center;
+    &_infos {
+        @include flexbox(row, space-between, center);
+        margin-bottom: 30px;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 0;
+        }
     }
-    &_title_location_tags{
+    &_title {
+        color: $primary;
+        font-size: clamp(18px, 3vw, 36px);
+        margin: 0;
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+    &_location {
+        margin: 0;
+        font-size: clamp(14px, 2vw, 18px);
+        font-weight: 500;
+    }
+    &_profil_rating {
+        @include flexbox(column, space-between, flex-end);
+        @media screen and (max-width: 768px) {
+            flex-direction: row-reverse;
+            width: 100%;
+            align-items: center;
+        }
+    }
+    &_title_location_tags {
         width: 60%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
-    &_title{
-        color: $primary;
-        font-size:36px;
-        margin: 0;
-    }
-    &_location{
-        margin: 0;
-        font-size: 18px;
-        font-weight: 500
-    }
-    &_name{
+
+    &_name {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        font-size: 18px;
+        font-size: clamp(12px, 3vw, 18px);
         font-weight: 500;
+        @media screen and (max-width: 768px) {
+            line-height: 17px;
+        }
     }
-    &_picture{
+    &_picture {
         border-radius: 50%;
         width: 64px;
         height: 64px;
         margin-left: 20px;
+        @media screen and (max-width: 768px) {
+            width: 32px;
+            height: 32px;
+        }
     }
-    &_profil{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+    &_profil {
+        @include flexbox(row, space-around, center);
+        margin-top: 10px;
         margin-bottom: 10px;
         height: 64px;
         line-height: 25.69px;
         color: $primary;
+        @media screen and (max-width: 768px) {
+            margin: 0;
+        }
     }
-    &_tags{
+    &_tags {
         margin-top: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        @include flexbox(row, space-between, center);
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+            margin-top: 0;
+        }
     }
-    &_tag{
+    &_tag {
         background-color: $primary;
         border-radius: 10px;
         height: 25px;
@@ -79,28 +114,30 @@
         justify-content: center;
         margin-right: 10px;
         padding: 2px 15px;
+        @media screen and (max-width: 768px) {
+            font-size: 10px;
+            height: 18px;
+            margin-top: 10px;
+        }
     }
-   
-    &_rating{
-        width: 196px;
-        height: 36px;
+    &_rating {
         margin-top: 20px;
         display: inline-flex;
         justify-content: space-between;
+        @media screen and (max-width: 768px) {
+            margin-top: 0;
+            width: 30%;
+        }
+        .tag_star {
+            width: 24px;
+            height: 24px;
+            padding-left: 15px;
+            @media screen and (max-width: 768px) {
+                padding-left: 0;
+                padding-right: 15px;
+                width: 13px;
+                height: 13px;
+            }
+        }
     }
-
 }
-.appart_infos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    .appart_profil_rating{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; 
-        align-items: flex-end;
-    }
-}
-
